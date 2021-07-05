@@ -14,4 +14,5 @@ This project will be used extensively at Deuzspark Technology, so expect it to g
 - Set the same development environment for everyone with just a click.
 - Add your custom engine to the windows registry
 - Crossplatform: Leveraging Avalonia, will run on Windows, Linux and MacOs(Wont be able to test this last one).
+- Will integrates with Edysseia, a platform for game development that we are developping at Deuzspark Technologies Inc.
 - More to come...
