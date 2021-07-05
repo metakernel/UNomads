@@ -13,4 +13,5 @@ This project will be used extensively at Deuzspark Technology, so expect it to g
 - Generate a new Engine Build from the ui.
 - Set the same development environment for everyone with just a click.
 - Add your custom engine to the windows registry
+- Crossplatform: Leveraging Avalonia, will run on Windows, Linux and MacOs(Wont be able to test this last one).
 - More to come...
