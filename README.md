@@ -11,4 +11,5 @@ This project will be used extensively at Deuzspark Technology, so expect it to g
 - Node editor: Generate custom BuildGraph script from ui (Will feel a bit like blueprint editor)
 - Custom UnrealEngine distribution & game project sync: Init and sync your prebuilt UE version and projects with a single click.
 - Generate a new Engine Build from the ui.
+- Set the same development environment for everyone with just a click.
 - More to come...
