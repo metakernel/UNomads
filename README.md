@@ -12,4 +12,5 @@ This project will be used extensively at Deuzspark Technology, so expect it to g
 - Custom UnrealEngine distribution & game project sync: Init and sync your prebuilt UE version and projects with a single click.
 - Generate a new Engine Build from the ui.
 - Set the same development environment for everyone with just a click.
+- Add your custom engine to the windows registry
 - More to come...
