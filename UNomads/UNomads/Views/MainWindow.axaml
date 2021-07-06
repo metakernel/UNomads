@@ -3,15 +3,76 @@
         xmlns:vm="using:UNomads.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:titlebars="clr-namespace:UNomads.Views.CustomTitleBars;assembly=UNomads"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="UNomads.Views.MainWindow"
+		WindowStartupLocation="CenterScreen"
+		ExtendClientAreaToDecorationsHint="True"
+		ExtendClientAreaChromeHints="NoChrome"
+		ExtendClientAreaTitleBarHeightHint="-1"
         Icon="/Assets/avalonia-logo.ico"
         Title="UNomads">
 
-    <Design.DataContext>
-        <vm:MainWindowViewModel/>
-    </Design.DataContext>
+	<NativeMenu.Menu>
+		<NativeMenu>
+			<NativeMenuItem Header="File">
+				<NativeMenuItem.Menu>
+					<NativeMenu>
+						<NativeMenuItem Header="Open"/>
+						<NativeMenuItem Header="Recent">
+							<NativeMenuItem.Menu>
+								<NativeMenu/>
+							</NativeMenuItem.Menu>
+						</NativeMenuItem>
+						<NativeMenuItem Header="Quit Avalonia"
+										Gesture="CTRL+Q"
+										Command="{Binding QuitProgramCommand}"/>
+					</NativeMenu>
+				</NativeMenuItem.Menu>
+			</NativeMenuItem>
+			<NativeMenuItem Header="Edit">
+				<NativeMenuItem.Menu>
+					<NativeMenu>
+						<NativeMenuItem Header="Copy"/>
+						<NativeMenuItem Header="Paste"/>
+					</NativeMenu>
+				</NativeMenuItem.Menu>
+			</NativeMenuItem>
+		</NativeMenu>
+	</NativeMenu.Menu>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+	<Window.KeyBindings>
+		<KeyBinding Gesture="CTRL+Q"
+					Command="{Binding QuitProgramCommand}"></KeyBinding>
+	</Window.KeyBindings>
 
+	<DockPanel HorizontalAlignment="Stretch"
+             VerticalAlignment="Stretch"
+             Name="ContentWrapper">
+		<titlebars:WindowsTitleBar IsSeamless="True"></titlebars:WindowsTitleBar>
+		<titlebars:MacosTitleBar IsSeamless="False"></titlebars:MacosTitleBar>
+		<DockPanel Background="Transparent">
+			<StackPanel HorizontalAlignment="Center"
+						VerticalAlignment="Center"
+						Spacing="10">
+				<ToggleButton Name="DarkThemeToggleButton"
+							  HorizontalAlignment="Center"
+							  Content="Dark Theme"></ToggleButton>
+				<ToggleButton Name="DefaultStyleToggleButton"
+							  HorizontalAlignment="Center"
+							  Content="Default Style"></ToggleButton>
+			</StackPanel>
+
+		</DockPanel>
+	</DockPanel>
+	
+	<Window.Background>
+		<SolidColorBrush>#242930</SolidColorBrush>
+	</Window.Background>
+
+	<Design.DataContext>
+		<vm:MainWindowViewModel/>
+	</Design.DataContext>
+
+	<TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 </Window>
