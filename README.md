@@ -1,18 +1,15 @@
 # UNomads
-UNomads is a build and dependency management software for UnrealEngine.
+UNomads is a multi-platforms development,build and dependencies management software for Unreal Engine.
 
-The ultimate goal of UNomads is to give a complete set of toolings for custom engine build, project and their distribution amongs teams. It is primarly made with git as VCS but will add perforce binding eventually.
+The ultimate goal of UNomads is to give a complete set of toolings for fast development, custom engine build workflows, projects and their distributions amongs teams.
 
-In game development most of the team dont have the knowledge to manage source control, dependancies and such so UNomads will provide a customisable pipeline through its easy to use gui interface and will let the complexity of managing build pipeline in the admins/engineers hands.
-
-This project will be used extensively at Deuzspark Technology, so expect it to grow as we progress in the developmment of our own custom UE5 engine development.
-
-## Here is an overview of some things that i want to add:
-- Node editor: Generate custom BuildGraph script from ui (Will feel a bit like blueprint editor)
+## Here is an overview of some features that i want to add:
+- Plugins Creation: Initialize new plugins with a lot more control then when doing it from the UE Editor. Split the plugins into modules and configure them.
+- Module Editor: Generate new modules, configure them and use the refactoring tool to do daunting tasks like module name changes accross all plugin.
+- BuildGraph Node Editor: Generate custom BuildGraph scripts from ui (Will feel a bit like a blueprint editor)
 - Custom UnrealEngine distribution & game project sync: Init and sync your prebuilt UE version and projects with a single click.
 - Generate a new Engine Build from the ui.
 - Set the same development environment for everyone with just a click.
 - Add your custom engine to the windows registry
-- Crossplatform: Leveraging Avalonia, will run on Windows, Linux and MacOs(Wont be able to test this last one).
-- Will integrates with Edysseia, a platform for game development that we are developping at Deuzspark Technologies Inc.
+- Cross-platform: Leveraging Avalonia, will run on Windows, Linux and MacOs(Wont be able to test this last one myself).
 - More to come...
